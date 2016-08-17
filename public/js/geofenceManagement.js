@@ -1,4 +1,8 @@
 
+// var endpointURL = 'http://127.0.0.1:3000/geofences'
+var endpointURL = 'https://www.luda.design/geofences'
+
+
 function initialize() {
     let point = [-43.530918, 172.634825]; // Default - Middle of Chch CBD.
 
@@ -151,7 +155,7 @@ function saveGeofence(venue_id, latlng) {
 
 function deleleAll() {
     var oReq = new XMLHttpRequest();
-    oReq.open("delete", "http://127.0.0.1:3000/geofences");
+    oReq.open("delete", endpointURL);
     oReq.send();
 
     window.location.reload(false);
@@ -162,7 +166,7 @@ function getGeofences() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
 
-            var url = new URL('http://127.0.0.1:3000/geofences'),
+            var url = new URL(endpointURL),
                 params = {latitude:position.coords.latitude, longitude:position.coords.longitude}
             Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
             fetch(url).then(function(response) {
