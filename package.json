@@ -1,0 +1,17 @@
+{
+  "name": "geoapi",
+  "version": "1.0.0",
+  "description": "An API for storing geofences and retrieving geofences",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Dane Creighton",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.8"
+  }
+}

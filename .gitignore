@@ -1,0 +1,4 @@
+.vscode/
+mongo/
+node_modules/
+startMongo.bat

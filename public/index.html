@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <style>
+            html, body {
+                width:100%;
+                height:100vh;
+                margin: 0;
+            }
+
+            .container, #map {
+                width:100%;
+                height:100%;
+            }
+
+            .delete-controls, .create-controls {
+                position: absolute;                
+                color: white;
+                font-family: sans-serif;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;      
+                background-color: rgba(0,0,0,0.5);
+                padding: 1% 0 1% 0;                               
+            }
+
+            .create-controls {
+                top: 0;             
+            }
+
+            .create-controls div {
+                display: flex;
+                flex-direction: column;             
+            }
+
+            .delete-controls {
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="map"></div>
+
+            <section class="create-controls">
+                <div>
+                    <label for="id">Venue ID</label>
+                    <input type="text" name="venue_id" id="venue_id" size="5" />
+                    <p><i>(click anywhere on the map to create a geofence)</i></p>
+                </div>
+            </section>
+
+            <section class="delete-controls">
+                <div>
+                    <input type="submit" onclick="deleleAll()" value="Delete All Geofences" />
+                    <!--<input type="submit" onclick="getGeofences()" value="Get My Geofences" />
+                    <input type="submit" onclick="getGeofence()" value="Am I in a geofence?" />-->
+                </div>
+            </section>
+        </div>
+
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyBHMG3Lumh6X_epm36sgz_U3Ei_oc6HTMU"></script>
+        <script src="../../js/geofenceManagement.js"></script>
+        <script>
+		</script>
+    </body>
+</html>
