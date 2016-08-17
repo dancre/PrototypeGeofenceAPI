@@ -19,6 +19,8 @@ app.get('/create', function(req, res) {
 
 app.use('/geofences', geofences);
 
-app.listen(3000, function () {
-console.log("express has started on port 3000");
+var port = 9000;
+
+app.listen(port, function () {
+console.log("express has started on port: " + port);
 });
